@@ -7,14 +7,18 @@ namespace IJRandom
         static void Main(string[] args)
         {
             Random rand = new Random();
-            int number = rand.Next(0, 101);
+            int numberThree = 3;
+            int numberFive = 5;
+            int min = 0;
+            int max = 101;
+            int number = rand.Next(min, max);
             int sumNumbers = 0;
             Console.WriteLine($"Рандомное число = {number}");
             Console.Write("Числа кратные 3 и 5 = ");
 
             for (int i = 1; i <= number; i++)
             {
-                if (i % 3 == 0 || i % 5 == 0)
+                if (i % numberThree == 0 || i % numberFive == 0)
                 {
                     Console.Write(i + " ");
                     sumNumbers += i;
